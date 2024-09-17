@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Processing.35 dentro de página HTML</title>
+    </head>
+    <body>
+        <canvas id="Lienzo1"></canvas>
+        <canvas id="Lienzo2"></canvas>
+        <canvas id="Lienzo3"></canvas>
+        <canvas id="Lienzo4"></canvas>
+        <canvas id="Lienzo5"></canvas>
+        <canvas id="Lienzo6"></canvas>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+    <script>
+    //Muñeco de nieve simple  
+    var codigoDePrograma1 = function(instanciaProcessing) {
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+           ellipse(200,300,150,150);
+       ellipse(200,180,120,120);
+           ellipse(200,90,90,90);
+        }
+    };
+    //Muñeco de nieve saludando
+    var codigoDePrograma2 = function(instanciaProcessing) {
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+            rect(1, 360, 397, 40);
+        ellipse(200, 300, 150, 150);
+            ellipse(200, 200, 100, 100);
+            ellipse(200, 120, 75, 75);
+            line(160,200,100,100);
+            line(240,200,300,100);
+        }
+    };
+    //Dia soleado
+    var codigoDePrograma3 = function(instanciaProcessing) {
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+            // The ground
+            fill(0, 255, 21);
+            background(0, 255, 242);
+    fill(17, 255, 0);
+    rect(0, 300, 400, 100);  
+
+    // The sun
+    fill(217, 255, 0);
+    ellipse(80, 64, 100, 100);  
+
+    // The snowman
+    fill(255, 255, 255);
+    ellipse(200, 300, 150, 150);
+    ellipse(200, 200, 100, 100);
+    ellipse(200, 120, 75, 75);
+        }
+    };
+    //Que hay de cenar?
+    var codigoDePrograma4 = function(instanciaProcessing) {
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+                background(186, 145, 20); // wooden table
+        ellipse(200, 200, 350, 350); // plate
+        ellipse(200, 200, 300, 300); 
+
+        //hamburguesa
+        fill(139,69, 19);
+        ellipse(200,200,100,100);
+        fill(255,228, 181);
+        ellipse(200,200,80,80);
+        fill(255,165, 0);
+        ellipse(200,200,60,60);
+        fill(255,0, 0);
+        ellipse(200,200,60,30);
+
+        //papas fritas
+        fill(255,255,0);
+        rect(170,150,10,40);
+        rect(185,150,10,40);
+        rect(200,150,10,40);
+
+
+        fill(0,0,255);
+        rect(270,160,30,60);
+        fill(255);
+        ellipse(285,190,10,10);
+        ellipse(275,200,10,10);
+        ellipse(295,210,10,10);
+        }
+    };
+    //Ratón
+    var codigoDePrograma5 = function(instanciaProcessing) {
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+    var ojosbuck = 35;
+    var dientesbuck = 5;
+    ellipse(150, 70, 60, 120);  // left ear
+    ellipse(240, 70, 60, 120);  // right ear
+
+    ellipse(200, 170, 150, 150);    // face
+
+    fill(0, 0, 0);
+
+    ellipse(170, 150, ojosbuck, ojosbuck);  // left eye
+    ellipse(230, 150, ojosbuck, ojosbuck);  // right eye
+
+    line(150, 200, 250, 200);   // mouth
+
+    noFill();
+    rect(185, 200, 15, dientesbuck); // left tooth
+    rect(200, 200, 15, dientesbuck); // right tooth
+        }
+    };
+    //Rana
+    var codigoDePrograma6 = function(instanciaProcessing) {
+        with (instanciaProcessing) {
+            size(400, 400);
+            frameRate(30);
+    var x = 200;
+    var y = 250;
+
+    noStroke();
+    fill(30, 204, 91); // a nice froggy green!
+
+    ellipse(x, y, 200, 100); // face
+    ellipse(x - 50, y - 50, 40, 40); // left eye socket
+    ellipse(x + 50, y - 50, 40, 40); // right eye socket
+
+    fill(255, 255, 255); // for the whites of the eyes!
+    ellipse(x - 50, y - 50, 30, 30); // left eyeball
+    ellipse(x + 50, y - 50, 30, 30); // right eyeball
+
+    fill(0,2,2);
+    rect(x - 55, y - 50, 9, 10);
+    rect(x + 40, y - 50, 9, 10);
+    ellipse(x,y,120,80);
+        }
+    };
+    var canvas1 = document.getElementById('Lienzo1');
+    var instanciaProcessing1 = new Processing(canvas1, codigoDePrograma1);
+    
+    var canvas2 = document.getElementById('Lienzo2');
+    var instanciaProcessing2 = new Processing(canvas2, codigoDePrograma2);
+    
+    var canvas3 = document.getElementById('Lienzo3');
+    var instanciaProcessing3 = new Processing(canvas3, codigoDePrograma3);
+    
+    var canvas4 = document.getElementById('Lienzo4');
+    var instanciaProcessing4 = new Processing(canvas4, codigoDePrograma4);
+    
+    var canvas5 = document.getElementById('Lienzo5');
+    var instanciaProcessing5 = new Processing(canvas5, codigoDePrograma5);
+    
+    var canvas6 = document.getElementById('Lienzo6');
+    var instanciaProcessing6 = new Processing(canvas6, codigoDePrograma6);
+    </script>
+</html>
+
+
